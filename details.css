@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #ecebde;
+    --nav-color: #d7d3bf;
+    --button-color:#c1baa1;
+    --font-color:#87806c;
+}
+
+body{
+    background: var(--main-color);
+}
+/* start navbar */
+header{
+    background: var(--nav-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    z-index: 999;
+}
+
+header .title a{
+    color: var(--font-color);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .navbar a{
+    color: var(--font-color);
+    font-size: 1.2em;
+    padding: 1em;
+    transition: 0.5s;
+    margin-left: 0.8em;
+}
+header .navbar a:hover{
+    background-color: #9f987662;
+    border-radius: 10px;
+}
+
+#logout{
+    color: #fff;
+    background-color: #a52a2a;
+    padding: 0.8em ;
+    border-radius: 10px;
+}
+
+#logout:hover{
+    background-color: #751e1e;
+}
+/* end header */
+
+/* start content */
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, var(--main-color) , #ecebdeac),
+    url(images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center ;
+    background-size: 100% 100%;
+    padding: 150px 15% 0px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    width: 30%;
+    color: var(--font-color);
+}
+
+.noveltitle{
+    margin: 3em 0 3em 0;
+}
+
+.noveltitle p{
+    font-size: 6em;
+    font-weight: 500;
+}
+
+.novelinfo{
+    margin-bottom: 5em;
+}
+
+.novelinfo p{
+    font-size: 1.4em;
+}
+
+p::selection{
+    background: var(--font-color);
+    color: #fff;
+}
+
+.read{
+    text-align: center;
+    margin-top: 3em;
+} 
+
+.read a{
+    background-color: var(--button-color);
+    color: white;
+    padding : 0.8em 1em;
+    font-size: 1.5em;
+    border-radius: 15px;
+    transition: 0.8s;
+}
+
+.read a:hover{
+    box-shadow: 0 6px 12px rgba(26, 26, 26, 0.442);
+}
+
+.imagenovel{
+    width: 25em;
+    height: 28em;
+    overflow: hidden;
+    box-shadow: 1px 10px 20px 10px rgba(6, 6, 6, 0.442);
+}
+.imagenovel img{
+    width: 100%;
+    height: 100%;
+}
+
+/* end content */
+
+/* start details */
+
+.det{
+    margin: 100px 0;
+}
+
+.det #title{
+    color: #666151;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.detail{
+    width: 80%;
+    margin: auto;
+    color: var(--font-color);
+    text-align: justify;
+    font-size: 1.8em ;
+    word-spacing: 0.1em;
+    direction: rtl;
+}
+
+/* end details */
+
+/* start footer */
+
+.foot{
+    width: 100%;
+    height: 60px;
+    background-color: var(--nav-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .intro {
+        padding: 4rem 2%;
+    }
+
+    .noveltitle p {
+        font-size: 1.5rem;
+    }
+
+    .novelinfo p {
+        font-size: 0.9rem;
+    }
+
+    .read a {
+        font-size: 1rem;
+        padding: 0.5em;
+    }
+
+    .imagenovel {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    header .title a {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    .intro {
+        padding: 3rem 2%;
+    }
+
+    .noveltitle p {
+        font-size: 1.2rem;
+    }
+
+    .novelinfo p {
+        font-size: 0.8rem;
+    }
+
+    .read a {
+        font-size: 0.9rem;
+        padding: 0.4em;
+    }
+
+    .imagenovel {
+        max-width: 200px;
+    }
+
+    .detail {
+        font-size: 0.9rem;
+    }
+}
+
+
