@@ -111,7 +111,7 @@ p::selection{
     background-color: var(--button-color);
     color: white;
     padding : 0.8em 1em;
-    font-size: 1.5em;
+    font-size: 2em;
     border-radius: 15px;
     transition: 0.8s;
 }
@@ -168,78 +168,95 @@ p::selection{
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .navbar nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .intro {
-        padding: 4rem 2%;
-    }
-
-    .noveltitle p {
-        font-size: 1.5rem;
-    }
-
-    .novelinfo p {
-        font-size: 0.9rem;
-    }
-
-    .read a {
-        font-size: 1rem;
-        padding: 0.5em;
-    }
-
-    .imagenovel {
-        max-width: 250px;
-    }
+@media (max-width: 1024px) {
+   body{
+        font-size: 15px;
+   }
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 0.5rem;
+@media (max-width: 850px) {
+    .intro{
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 50px 10%;
     }
-
-    header .title a {
-        font-size: 1.2rem;
+    .intro .info{
+        width:80%;
+        text-align: center;
     }
-
-    .navbar a {
-        font-size: 0.8rem;
+    .info .noveltitle{
+        font-size: 18px;
     }
-
-    .intro {
-        padding: 3rem 2%;
+    .info .novelinfo{
+        font-size: 20px;
     }
-
-    .noveltitle p {
-        font-size: 1.2rem;
+    .info .read{
+        font-size: 22px;
     }
-
-    .novelinfo p {
-        font-size: 0.8rem;
-    }
-
-    .read a {
-        font-size: 0.9rem;
-        padding: 0.4em;
-    }
-
-    .imagenovel {
-        max-width: 200px;
-    }
-
-    .detail {
-        font-size: 0.9rem;
+    .intro .imagenovel{
+        width: 75%;
+        height: auto;
+        /* margin-top: calc(20px + 3em); */
     }
 }
+@media (max-width: 720px) {
+    header {
+        font-size: 12px;
+    }
+    .info .noveltitle{
+        font-size: 16px;
+    }
+    .info .read{
+        font-size: 20px;
+    }
+}
+@media (max-width: 565px){
+    body{
+        font-size: 12px;
+    }
+    header {
+        font-size: 11px;
+        padding-left: 12px;
+    }
+    .info .noveltitle{
+        font-size: 13px;
+    }
+    .info .novelinfo{
+        font-size: 16px;
+    }
+    .info .read{
+        font-size: 18px;
+    }
 
+}
+@media (max-width: 470px){
+    header {
+        font-size: 9px;
+        padding-right: 5px;
+    }
+    header .navbar a{
+        margin-left: 10px;
+    }
+    .info .noveltitle{
+        font-size: 10px;
+    }
+    .info .novelinfo{
+        font-size: 15px;
+    }
+    .info .read{
+        font-size: 18px;
+    }
+    .intro .imagenovel{
+        width: 85%;
+        height: auto;
+        /* margin-top: calc(20px + 3em); */
+    }
 
+}
+@media (max-width: 350px){
+    header{
+        font-size: 7px;
+    }
+}
